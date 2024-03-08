@@ -17,8 +17,13 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 echo 'Copiando los ficheros hasta la ruta de despliegue'
-                sh 'cp -R build/* /var/www/html/despliegue'
                 sh 'npm install -g serve'
+            }
+        }
+        stage('Execute'){
+            steps{
+                echo 'Executing...'
+                sh 'serve -s build -l 3000'
             }
         }
     }
