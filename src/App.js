@@ -12,6 +12,7 @@ function App() {
           className='freecodecamp-logo' />
       </div>
       <div className='tareas-lista-principal'>
+      	<p>Código modificado en la rama-jorge</p>
         <h1>Mis Tareas</h1>
         <ListaDeTareas />
       </div>
